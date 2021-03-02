@@ -1,0 +1,9 @@
+
+ npm i angular-hammer
+ ng add @angular/material
+
+ ng g m shared/modules
+ ng g m invoice-builder --routing --dry-run 
+ ng g m invoice-builder --routing
+
+ ng g c invoice-builder/invoice-builder -is -it --flat
