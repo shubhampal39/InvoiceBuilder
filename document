@@ -7,3 +7,6 @@
  ng g m invoice-builder --routing
 
  ng g c invoice-builder/invoice-builder -is -it --flat
+  invoice-builder/components/main-content 
+  ng g c invoice-builder/components/side-nav  -dry-run
+  ng g c invoice-builder/components/toolbar

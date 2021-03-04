@@ -13,6 +13,7 @@ import {MaterialModule} from './shared/material.module'
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    AppRoutingModule,
     MaterialModule
   ],
   providers: [],
