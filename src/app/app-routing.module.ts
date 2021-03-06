@@ -4,8 +4,13 @@ import { AppComponent } from './app.component';
 import { InvoiceBuilderModule } from './invoice-builder/invoice-builder.module';
 
 const routes: Routes = [
+  {
+    path:'',
+    component:AppComponent
+  },
  { path:'invoice-builder',
   loadChildren:()=> InvoiceBuilderModule
+  // loadChildren:'app/invoice-builder/invoice-builder.module#InvoiceBuilderRoutingModule'
 },
 {
   path:'**',
