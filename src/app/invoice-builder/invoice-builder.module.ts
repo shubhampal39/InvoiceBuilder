@@ -6,13 +6,15 @@ import { InvoiceBuilderComponent } from './invoice-builder.component';
 import { MainContentComponent } from './components/main-content/main-content.component';
 import { SideNavComponent } from './components/side-nav/side-nav.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
+import { MaterialModule } from '../shared/material.module';
 
 
 @NgModule({
   declarations: [InvoiceBuilderComponent, MainContentComponent, SideNavComponent, ToolbarComponent],
   imports: [
     CommonModule,
-    InvoiceBuilderRoutingModule
+    InvoiceBuilderRoutingModule,
+    MaterialModule
   ]
 })
 export class InvoiceBuilderModule { }
