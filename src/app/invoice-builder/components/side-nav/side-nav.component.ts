@@ -1,30 +1,25 @@
-import { Component, NgZone, OnInit } from '@angular/core';
-const Max_WIDTH_BREAKPOINT=270;
+import { Component, OnInit, NgZone } from '@angular/core';
+const MAX_WIDTH_BREAKPOINT = 720;
 @Component({
   selector: 'app-side-nav',
   templateUrl: './side-nav.component.html',
   styleUrls: ['./side-nav.component.scss']
 })
 export class SideNavComponent implements OnInit {
-private mediaMatcher:MediaQueryList=matchMedia(
-  `(max-width:${Max_WIDTH_BREAKPOINT}px)`);
 
-  constructor(private zone:NgZone) {
-   }
+  private mediaMatcher:MediaQueryList =
+  matchMedia(`(max-width : ${MAX_WIDTH_BREAKPOINT}px)`)
+  constructor(zone: NgZone) {
 
-  ngOnInit(): void {
-    this.zone.runOutsideAngular(()=>{
-      this.isScreenSmall();
-    });
+    // this.mediaMatcher.addListener((mql) => {
+    //   zone.run(() => this.mediaMatcher = mql)
+    // })
   }
-  
+
+  ngOnInit() {
+  }
+
   isScreenSmall(){
-    if(window.matchMedia('(max-width:767px)').matches)
-     { 
-    console.log("abcd");
-       return true;}
-       console.log("a");
-    return false;
-    
+   return this.mediaMatcher.matches;
   }
 }
